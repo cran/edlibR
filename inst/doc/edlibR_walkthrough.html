@@ -49,7 +49,7 @@ overflow: visible;
 </style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -388,10 +388,10 @@ the parameter <code>cigarFormat</code> in the function
 </ul>
 <div id="examples" class="section level3">
 <h3>Examples:</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(edlibR)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>algn1 <span class="ot">=</span> <span class="fu">align</span>(<span class="st">&quot;ACTG&quot;</span>, <span class="st">&quot;CACTRT&quot;</span>, <span class="at">mode=</span><span class="st">&quot;HW&quot;</span>, <span class="at">task=</span><span class="st">&quot;path&quot;</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(algn1)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">library</span>(edlibR)</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>algn1 <span class="ot">=</span> <span class="fu">align</span>(<span class="st">&quot;ACTG&quot;</span>, <span class="st">&quot;CACTRT&quot;</span>, <span class="at">mode=</span><span class="st">&quot;HW&quot;</span>, <span class="at">task=</span><span class="st">&quot;path&quot;</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="fu">print</span>(algn1)</span></code></pre></div>
 <pre><code>## $editDistance
 ## [1] 1
 ## 
@@ -411,8 +411,8 @@ the parameter <code>cigarFormat</code> in the function
 ## 
 ## $cigarFormat
 ## [1] &quot;extended&quot;</code></pre>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>algn2 <span class="ot">=</span> <span class="fu">align</span>(<span class="st">&quot;elephant&quot;</span>, <span class="st">&quot;telephone&quot;</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(algn2)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>algn2 <span class="ot">=</span> <span class="fu">align</span>(<span class="st">&quot;elephant&quot;</span>, <span class="st">&quot;telephone&quot;</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="fu">print</span>(algn2)</span></code></pre></div>
 <pre><code>## $editDistance
 ## [1] 3
 ## 
@@ -429,8 +429,8 @@ the parameter <code>cigarFormat</code> in the function
 ## 
 ## $cigarFormat
 ## [1] &quot;extended&quot;</code></pre>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>algn3 <span class="ot">=</span> <span class="fu">align</span>(<span class="st">&quot;ACTG&quot;</span>, <span class="st">&quot;CACTRT&quot;</span>, <span class="at">mode=</span><span class="st">&quot;HW&quot;</span>, <span class="at">task=</span><span class="st">&quot;path&quot;</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(algn3)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>algn3 <span class="ot">=</span> <span class="fu">align</span>(<span class="st">&quot;ACTG&quot;</span>, <span class="st">&quot;CACTRT&quot;</span>, <span class="at">mode=</span><span class="st">&quot;HW&quot;</span>, <span class="at">task=</span><span class="st">&quot;path&quot;</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="fu">print</span>(algn3)</span></code></pre></div>
 <pre><code>## $editDistance
 ## [1] 1
 ## 
@@ -450,9 +450,9 @@ the parameter <code>cigarFormat</code> in the function
 ## 
 ## $cigarFormat
 ## [1] &quot;extended&quot;</code></pre>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">## the previous example with additionalEqualities </span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>algn4 <span class="ot">=</span> <span class="fu">align</span>(<span class="st">&quot;ACTG&quot;</span>, <span class="st">&quot;CACTRT&quot;</span>, <span class="at">mode=</span><span class="st">&quot;HW&quot;</span>, <span class="at">task=</span><span class="st">&quot;path&quot;</span>, <span class="at">additionalEqualities=</span><span class="fu">list</span>(<span class="fu">c</span>(<span class="st">&quot;R&quot;</span>, <span class="st">&quot;A&quot;</span>), <span class="fu">c</span>(<span class="st">&quot;R&quot;</span>, <span class="st">&quot;G&quot;</span>)))</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(algn4)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="do">## the previous example with additionalEqualities </span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>algn4 <span class="ot">=</span> <span class="fu">align</span>(<span class="st">&quot;ACTG&quot;</span>, <span class="st">&quot;CACTRT&quot;</span>, <span class="at">mode=</span><span class="st">&quot;HW&quot;</span>, <span class="at">task=</span><span class="st">&quot;path&quot;</span>, <span class="at">additionalEqualities=</span><span class="fu">list</span>(<span class="fu">c</span>(<span class="st">&quot;R&quot;</span>, <span class="st">&quot;A&quot;</span>), <span class="fu">c</span>(<span class="st">&quot;R&quot;</span>, <span class="st">&quot;G&quot;</span>)))</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="fu">print</span>(algn4)</span></code></pre></div>
 <pre><code>## $editDistance
 ## [1] 0
 ## 
@@ -569,13 +569,13 @@ will be too ambiguous for getNiceAlignment() to correctly reconstruct
 the alignment() in “NICE” format.</p>
 <div id="examples-1" class="section level3">
 <h3>Examples:</h3>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(edlibR)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>query <span class="ot">=</span> <span class="st">&quot;elephant&quot;</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>target <span class="ot">=</span> <span class="st">&quot;telephone&quot;</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>result <span class="ot">=</span> <span class="fu">align</span>(query, target, <span class="at">task =</span> <span class="st">&quot;path&quot;</span>)</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>nice_algn <span class="ot">=</span> <span class="fu">getNiceAlignment</span>(result, query, target)</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(nice_algn)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">library</span>(edlibR)</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>query <span class="ot">=</span> <span class="st">&quot;elephant&quot;</span></span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a>target <span class="ot">=</span> <span class="st">&quot;telephone&quot;</span></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>result <span class="ot">=</span> <span class="fu">align</span>(query, target, <span class="at">task =</span> <span class="st">&quot;path&quot;</span>)</span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a>nice_algn <span class="ot">=</span> <span class="fu">getNiceAlignment</span>(result, query, target)</span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a><span class="fu">print</span>(nice_algn)</span></code></pre></div>
 <pre><code>## $query_aligned
 ## [1] &quot;-elephant&quot;
 ## 
@@ -612,14 +612,14 @@ must equal 1).</li>
 <code>getNiceAlignment()</code> to the console for quickly inspecting
 the alignment. Users can think of this function as a “pretty-print”
 function for visualization.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(edlibR)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="do">## example above from getNiceAlignment()</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>query <span class="ot">=</span> <span class="st">&quot;elephant&quot;</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>target <span class="ot">=</span> <span class="st">&quot;telephone&quot;</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>result <span class="ot">=</span> <span class="fu">align</span>(query, target, <span class="at">task =</span> <span class="st">&quot;path&quot;</span>)</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>nice_algn <span class="ot">=</span> <span class="fu">getNiceAlignment</span>(result, query, target)</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="fu">nice_print</span>(nice_algn)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">library</span>(edlibR)</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="do">## example above from getNiceAlignment()</span></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a>query <span class="ot">=</span> <span class="st">&quot;elephant&quot;</span></span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a>target <span class="ot">=</span> <span class="st">&quot;telephone&quot;</span></span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a>result <span class="ot">=</span> <span class="fu">align</span>(query, target, <span class="at">task =</span> <span class="st">&quot;path&quot;</span>)</span>
+<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a>nice_algn <span class="ot">=</span> <span class="fu">getNiceAlignment</span>(result, query, target)</span>
+<span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a><span class="fu">nice_print</span>(nice_algn)</span></code></pre></div>
 <pre><code>## [1] &quot;query:   -elephant&quot;
 ## [1] &quot;matched: -|||||.|.&quot;
 ## [1] &quot;target:  telephone&quot;</code></pre>
